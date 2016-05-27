@@ -49,13 +49,12 @@ if __name__ == "__main__":
         print("\n\n Peguei macaco do tipo ", type(macacoDaVez))
         
         if(type(macacoDaVez) is MicoSagui):
-            if(len(frutas) >= 0):
+            if(len(frutas) > 0):
                 macacoDaVez.comer(frutas)
-            elif(len(bananas) >= 0):
+            else:
                 macacoDaVez.comer(bananas) 
                             
         elif (type(macacoDaVez) is MacacoPrego):
-            if(len(bananas)>=0):
                 macacoDaVez.comer(bananas)
                            
         else:
