@@ -75,7 +75,7 @@ class MacacoZumbi(Macaco):
         while(self == alimento[indice] and len(alimento) > 1):
                 indice = randint(0, len(alimento)-1)
          
-        if(len(alimento) > 0 and self != alimento[indice]):
+        if(len(alimento) > 0 and self != alimento[indice]): 
             
             
             print("comendo ", type(alimento[indice]))

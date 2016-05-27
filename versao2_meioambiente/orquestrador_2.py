@@ -52,7 +52,7 @@ if __name__ == "__main__":
             if(len(frutas) >= 0):
                 macacoDaVez.comer(frutas)
             elif(len(bananas) >= 0):
-                macacoDaVez.comer(bananas)
+                macacoDaVez.comer(bananas) 
                             
         elif (type(macacoDaVez) is MacacoPrego):
             if(len(bananas)>=0):
