@@ -18,13 +18,21 @@ class Util:
         macacos = []
         for i in range (quantidadeMacacos):
             j = randint(0, quantidadeMacacos-1)
-            if (j >= 0 and j < 4):
+            fatia_1 = int(quantidadeMacacos*0.33)
+            fatia_2 = int(quantidadeMacacos*0.66)
+            
+            
+            
+            
+            if (j >= 0 and j < fatia_1+1):
                 macacos.append(v1.MacacoPrego("Macaco Prego"))
-            elif (j >= 4 and j < 8):
+            elif (j >= fatia_1+1 and j < fatia_2+1):
                 macacos.append(v1.MicoSagui("Mico Sagui"))
             else:
                 macacos.append(v1.MacacoZumbi("Macaco Zumbi"))
-        
+                
+           
+                
         return macacos
     
     
@@ -34,13 +42,19 @@ class Util:
         macacos = []
         for i in range (quantidadeMacacos):
             j = randint(0, quantidadeMacacos-1)
-            if (j >= 0 and j < 4):
+            
+            fatia_1 = int(quantidadeMacacos*0.33)
+            fatia_2 = int(quantidadeMacacos*0.66)
+            
+                
+            if (j >= 0 and j < fatia_1+1):
                 macacos.append(v2.MacacoPrego("Macaco Prego"))
-            elif (j >= 4 and j < 8):
+            elif (j >= fatia_1+1 and j < fatia_2+1):
                 macacos.append(v2.MicoSagui("Mico Sagui"))
             else:
                 macacos.append(v2.MacacoZumbi("Macaco Zumbi"))
         
+            
         return macacos
     
     @abstractclassmethod

@@ -34,12 +34,13 @@ if __name__ == "__main__":
    
         
     alimentos = []
+    macacoDaVez = None
     alimentos.append(frutas)
     alimentos.append(bananas)
     alimentos.append(macacos)
     
     
-    while (len(macacos) > 1):
+    while (len(macacos) > 0):
          
         
         i = randint(0, (len(macacos) - 1))
@@ -48,13 +49,13 @@ if __name__ == "__main__":
         print("\n\n Peguei macaco do tipo ", type(macacoDaVez))
         
         if(type(macacoDaVez) is MicoSagui):
-            if(len(frutas) > 0):
+            if(len(frutas) >= 0):
                 macacoDaVez.comer(frutas)
-            elif(len(bananas)>0):
+            elif(len(bananas) >= 0):
                 macacoDaVez.comer(bananas)
                             
         elif (type(macacoDaVez) is MacacoPrego):
-            if(len(bananas)>0):
+            if(len(bananas)>=0):
                 macacoDaVez.comer(bananas)
                            
         else:
@@ -64,6 +65,7 @@ if __name__ == "__main__":
             print(type(macacoDaVez), " morreu com ", macacoDaVez._life)
             macacos.pop(i)
             print(len(macacos), " macacos sobraram")
+    
         
             
     print("Todos os macacos morreram")
